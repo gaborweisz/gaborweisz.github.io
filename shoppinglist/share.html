@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping List</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 3em 1em; }
+    a.button { display: inline-block; padding: 0.8em 1.6em; border-radius: 8px;
+               background: #2e7d32; color: #fff; text-decoration: none; font-size: 1.1em; }
+  </style>
+</head>
+<body>
+  <h1>🛒 Shopping List</h1>
+  <p>Tap the button to open the shared list in the Shopping List app.</p>
+  <p><a id="open" class="button" href="#">Open in the app</a></p>
+  <script>
+    // Shown only when the app did not catch the link; hand it over via the custom scheme
+    var data = new URLSearchParams(location.search).get("d");
+    if (data) {
+      document.getElementById("open").href = "shoppinglist://share?d=" + encodeURIComponent(data);
+    }
+  </script>
+</body>
+</html>

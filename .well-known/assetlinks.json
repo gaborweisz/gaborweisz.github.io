@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.trainig.shoppinglist",
+      "sha256_cert_fingerprints": [
+        "95:38:BF:9A:77:7C:3A:C5:96:80:DF:AA:FF:85:3A:4F:73:69:4F:02:DB:CC:C1:2B:CF:4E:B5:F6:42:94:DF:08"
+      ]
+    }
+  }
+]
